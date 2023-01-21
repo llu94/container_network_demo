@@ -4,7 +4,7 @@
 
 Create and validate two new network namespaces
 
-<code><ul> 
+<code><ul>
 <li> sudo ip netns add east
 <li> sudo ip netns add west
 <li> sudo ip netns ls
@@ -51,9 +51,9 @@ Query from the root and west network namespaces
 
 <code><ul>
 <li> ip netns exec east ip addr
-<li> curl -v <IP_ADDRESS>:8080
-<li> sudo ip netns exec west 
-<li> curl -v <IP_ADDRESS>:8080
+<li> curl -v $IP_ADDRESS:8080
+<li> sudo ip netns exec west
+<li> curl -v $IP_ADDRESS:8080
 </ul></code>
 
-You should 
+You should not be able to access the container from the east namespace
